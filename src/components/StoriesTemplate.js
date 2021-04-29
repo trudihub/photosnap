@@ -1,18 +1,7 @@
-import {useState, useEffect} from "react"
 
 const StoriesTemplate = ({url, title, author}) => {
 
-    const[deviceWidth, setDeviceWidth] = useState();
-
-    useEffect(() => {
-        setDeviceWidth(window.innerWidth)
-        window.addEventListener("resize", ()=>{
-            setDeviceWidth(window.innerWidth);
-        });
-        return ()=> {
-            setDeviceWidth()
-        }
-    }, [])
+    
 
     return (
         <>

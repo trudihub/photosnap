@@ -1,6 +1,6 @@
 import Logo from "../assets/shared/desktop/logo.svg"
 import { HeaderStyle } from "./StyledHome"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 
 import BurgerMenu from "../assets/shared/mobile/menu.svg"
@@ -9,18 +9,9 @@ import BurgerMenuClose from "../assets/shared/mobile/close.svg"
 
 const Header = () => {
 
-    const [deviceWidth, setDeviceWidth] = useState()
     const [openMenu, setOpenMenu] = useState(false)
 
-    useEffect(() => {
-        setDeviceWidth(window.innerWidth)
-        window.addEventListener("resize", () => {
-            setDeviceWidth(window.innerWidth);
-        });
-        return () => {
-            setDeviceWidth()
-        }
-    }, [])
+    
 
 
     return (
